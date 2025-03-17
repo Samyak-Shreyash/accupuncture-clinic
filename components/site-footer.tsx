@@ -4,16 +4,10 @@ import { Facebook, Instagram, Twitter, Youtube, MapPin, Phone, Mail, Clock } fro
 const clinicTitle = process.env.CLINIC_NAME
 const clinicEmail = process.env.CLINIC_EMAIL
 const clinicPhone = process.env.CLINIC_PHONE
-const clinicAddress = process.env.CLINIC_ADDRESS
 const clinicAddress_line_1 = process.env.CLINIC_ADDRESS_LINE_1
 const clinicAddress_city = process.env.CLINIC_ADDRESS_CITY
 const clinicAddress_state = process.env.CLINIC_ADDRESS_STATE
 const clinicAddress_zip = process.env.CLINIC_ADDRESS_ZIP
-const clinicFacebook = process.env.CLINIC_FACEBOOK
-const clinicInstagram = process.env.CLINIC_INSTAGRAM
-const clinicTwitter = process.env.CLINIC_TWITTER
-const clinicYoutube = process.env.CLINIC_YOUTUBE
-
 export default function SiteFooter() {
   return (
     <footer className="bg-gray-900 text-white">

@@ -22,7 +22,7 @@ export default function SiteHeader() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Practitioners", href: "/practitioners" },
+    { name: "Blogs", href: "/blog" },
     { name: "Testimonials", href: "/testimonials" },
     { name: "Contact", href: "/contact" },
   ]
@@ -52,7 +52,7 @@ export default function SiteHeader() {
         <div className="flex items-center space-x-4">
           <div className="hidden md:flex md:items-center">
             <Phone className="w-4 h-4 mr-2 text-primary" />
-            <span className="text-sm font-medium">{clinicPhone}</span>
+            <span className="text-sm font-medium">+91-9009953331</span>
           </div>
 
           <Button asChild className="hidden md:inline-flex">
@@ -73,10 +73,6 @@ export default function SiteHeader() {
                     <span className="text-xl font-bold text-primary">Kapil</span>
                     <span className="ml-1 text-xl font-light">Acupuncture</span>
                   </Link>
-                  <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
-                    <X className="w-5 h-5" />
-                    <span className="sr-only">Close menu</span>
-                  </Button>
                 </div>
 
                 <nav className="flex flex-col py-6 space-y-4">
@@ -95,7 +91,7 @@ export default function SiteHeader() {
                 <div className="flex flex-col mt-auto space-y-4 pt-6 border-t">
                   <div className="flex items-center">
                     <Phone className="w-4 h-4 mr-2 text-primary" />
-                    <span className="text-sm font-medium">{clinicPhone}</span>
+                    <span className="text-sm font-medium">+91-9009953331</span>
                   </div>
 
                   <Button asChild className="w-full">

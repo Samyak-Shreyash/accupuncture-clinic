@@ -7,7 +7,7 @@ import { CalendarIcon, Clock, Tag, ArrowRight } from "lucide-react"
 
 const clinicTitle = process.env.CLINIC_NAME
 export const metadata = {
-  title: "Blog | " + clinicTitle,
+  title: "Blogs | " + clinicTitle,
   description: "Read our latest articles on acupuncture, traditional Chinese medicine, and holistic health practices.",
 }
 

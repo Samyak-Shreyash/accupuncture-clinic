@@ -70,21 +70,8 @@ export default function TestimonialCarousel() {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="w-full flex-shrink-0 px-4">
               <Card className="border-none shadow-lg">
-                <CardContent className="p-8">
+                <CardContent className="p-8 flex flex-col items-center text-center">
                   <div className="flex flex-col items-center text-center">
-                    <div className="relative mb-6">
-                      <div className="absolute -top-2 -left-2">
-                        <Quote className="w-8 h-8 text-primary/20" />
-                      </div>
-                      <div className="relative w-20 h-20 overflow-hidden rounded-full border-4 border-primary/10">
-                        <Image
-                          src={testimonial.image || "/placeholder.svg"}
-                          alt={testimonial.name}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                    </div>
                     <p className="mb-6 text-lg text-gray-700">{testimonial.content}</p>
                     <h4 className="text-xl font-semibold text-gray-900">{testimonial.name}</h4>
                     <p className="text-sm text-gray-500">{testimonial.role}</p>

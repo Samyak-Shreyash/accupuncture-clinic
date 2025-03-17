@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { PhoneCall, Mail, MapPin, Clock, ArrowRight, CheckCircle } from "lucide-react"
 import TestimonialCarousel from "@/components/testimonial-carousel"
 import AppointmentForm from "@/components/appointment-form"
+import ImageCarousel from "@/components/image-carousel"
 
 const clinicTitle = process.env.CLINIC_NAME
 const clinicEmail = process.env.CLINIC_EMAIL
@@ -16,15 +17,16 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative w-full h-[600px] flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
-          <Image
+        <div className="absolute z-0">
+          {/* <Image
             src="/hero_image_1.jpg?height=600&width=1920"
             alt="Acupuncture treatment"
             fill
             className="object-cover brightness-[0.7]"
             priority
-          />
-        </div>
+          /> */}
+          <ImageCarousel />
+        {/* </div>
         <div className="container relative z-10 px-4 mx-auto text-center text-white">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Holistic Healing Through Ancient Wisdom
@@ -39,7 +41,7 @@ export default function Home() {
             <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20">
               Learn More
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -222,7 +224,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-white/70">Call Us</p>
-                    <p className="text-lg font-semibold">{clinicPhone}</p>
+                    <p className="text-lg font-semibold text-white">{clinicPhone}</p>
                   </div>
                 </div>
 

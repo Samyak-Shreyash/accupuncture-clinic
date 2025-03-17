@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { PhoneCall, Mail, MapPin, Clock, ArrowRight, CheckCircle } from "lucide-react"
 import TestimonialCarousel from "@/components/testimonial-carousel"
 import AppointmentForm from "@/components/appointment-form"
-import ImageCarousel from "@/components/image-carousel"
+// import ImageCarousel from "@/components/image-carousel"
 
 const clinicTitle = process.env.CLINIC_NAME
 const clinicEmail = process.env.CLINIC_EMAIL
@@ -18,14 +18,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative w-full h-[600px] flex items-center justify-center">
         <div className="absolute z-0">
-          {/* <Image
+          <Image
             src="/hero_image_1.jpg?height=600&width=1920"
             alt="Acupuncture treatment"
             fill
             className="object-cover brightness-[0.7]"
             priority
-          /> */}
-          <ImageCarousel />
+          />
+          {/* <ImageCarousel /> */}
         {/* </div>
         <div className="container relative z-10 px-4 mx-auto text-center text-white">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">

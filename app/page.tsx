@@ -203,7 +203,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Appointment Section */}
+      {/* Appointment Section
       <section className="py-16 bg-primary text-white">
         <div className="container px-4 mx-auto">
           <div className="grid gap-12 md:grid-cols-2">
@@ -263,7 +263,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

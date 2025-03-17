@@ -18,7 +18,7 @@ export default function BlogPage() {
       <section className="relative w-full h-[400px] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=400&width=1920"
+            src="/blog_image.jpg?height=400&width=1920"
             alt="Acupuncture blog"
             fill
             className="object-cover brightness-[0.7]"
@@ -45,7 +45,7 @@ export default function BlogPage() {
                     title: "The Science Behind Acupuncture: How It Works to Relieve Pain",
                     excerpt:
                       "Explore the scientific mechanisms that make acupuncture an effective treatment for various types of pain, from chronic conditions to acute injuries.",
-                    image: "/placeholder.svg?height=400&width=800",
+                    image: "/blog_image_2.jpg?height=400&width=800",
                     date: "June 15, 2023",
                     readTime: "8 min read",
                     category: "Pain Management",
@@ -55,7 +55,7 @@ export default function BlogPage() {
                     title: "Acupuncture for Stress and Anxiety: Finding Calm in a Chaotic World",
                     excerpt:
                       "Discover how acupuncture can help regulate your nervous system, reduce stress hormones, and promote a sense of calm and wellbeing in today's fast-paced world.",
-                    image: "/placeholder.svg?height=400&width=800",
+                    image: "/blog_image_5.jpg?height=400&width=800",
                     date: "May 28, 2023",
                     readTime: "6 min read",
                     category: "Mental Health",
@@ -65,7 +65,7 @@ export default function BlogPage() {
                     title: "Fertility Support Through Acupuncture: What to Expect",
                     excerpt:
                       "Learn how acupuncture can support reproductive health, balance hormones, and improve fertility for both women and men trying to conceive.",
-                    image: "/placeholder.svg?height=400&width=800",
+                    image: "/blog_image_4.jpg?height=400&width=800",
                     date: "April 12, 2023",
                     readTime: "10 min read",
                     category: "Women's Health",
@@ -75,7 +75,7 @@ export default function BlogPage() {
                     title: "Acupuncture for Digestive Health: Addressing IBS, Bloating, and More",
                     excerpt:
                       "Understand how acupuncture can help regulate digestive function, reduce inflammation, and provide relief from common digestive disorders.",
-                    image: "/placeholder.svg?height=400&width=800",
+                    image: "/blog_image_3.jpg?height=400&width=800",
                     date: "March 5, 2023",
                     readTime: "7 min read",
                     category: "Digestive Health",
@@ -85,7 +85,7 @@ export default function BlogPage() {
                     title: "Combining Acupuncture with Western Medicine: An Integrated Approach",
                     excerpt:
                       "Explore how acupuncture can complement conventional medical treatments to provide better outcomes and reduced side effects for various health conditions.",
-                    image: "/placeholder.svg?height=400&width=800",
+                    image: "/blog_image.jpg?height=400&width=800",
                     date: "February 18, 2023",
                     readTime: "9 min read",
                     category: "Integrative Medicine",

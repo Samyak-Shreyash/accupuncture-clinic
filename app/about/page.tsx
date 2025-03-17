@@ -20,7 +20,7 @@ export default function AboutPage() {
       <section className="relative w-full h-[400px] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=400&width=1920"
+            src="/Accupunture.jpg?height=400&width=1920"
             alt="Acupuncture clinic interior"
             fill
             className="object-cover brightness-[0.7]"
@@ -46,7 +46,7 @@ export default function AboutPage() {
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div>
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/clinic.jpg?height=500&width=600"
                 alt="Clinic founder"
                 width={600}
                 height={500}

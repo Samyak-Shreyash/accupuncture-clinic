@@ -49,7 +49,7 @@ export default function Home() {
           <div className="flex flex-col items-center md:flex-row md:gap-12">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/clinic.jpg?height=500&width=600"
                 alt="Acupuncture clinic"
                 width={600}
                 height={500}
@@ -98,37 +98,37 @@ export default function Home() {
                 title: "Traditional Acupuncture",
                 description:
                   "Classic needle therapy based on ancient Chinese medicine principles to restore energy flow and balance.",
-                image: "/placeholder.svg?height=250&width=400",
+                image: "/blog_image_2.jpg?height=250&width=400",
               },
               {
                 title: "Cupping Therapy",
                 description:
                   "A form of alternative medicine where cups are placed on the skin to create suction and promote healing.",
-                image: "/placeholder.svg?height=250&width=400",
+                image: "/cupping.jpg?height=250&width=400",
               },
               {
                 title: "Moxibustion",
                 description:
                   "Therapeutic technique involving burning dried mugwort near specific points on the body to stimulate circulation.",
-                image: "/placeholder.svg?height=250&width=400",
+                image: "/blog_image.jpg?height=250&width=400",
               },
               {
                 title: "Auricular Acupuncture",
                 description:
                   "Specialized treatment focusing on acupuncture points in the ear to address various health conditions.",
-                image: "/placeholder.svg?height=250&width=400",
+                image: "/blog_image_5.jpg?height=250&width=400",
               },
               {
                 title: "Electroacupuncture",
                 description:
                   "Modern adaptation of traditional acupuncture using small electrical currents for enhanced therapeutic effects.",
-                image: "/placeholder.svg?height=250&width=400",
+                image: "/blog_image_4.jpg?height=250&width=400",
               },
               {
                 title: "Acupressure Massage",
                 description:
                   "Gentle pressure applied to specific points to relieve tension, improve circulation and promote relaxation.",
-                image: "/placeholder.svg?height=250&width=400",
+                image: "/blog_image_4.jpg?height=250&width=400",
               },
             ].map((service, index) => (
               <Card key={index} className="overflow-hidden transition-all hover:shadow-lg">

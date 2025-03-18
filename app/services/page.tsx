@@ -4,13 +4,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CheckCircle } from "lucide-react"
+import { 
+  CLINIC_NAME as clinicName,
+  CLINIC_SERVICE_DESCRIPTION as clinicServiceDescription
+} from "@/lib/constants"
 
-const clinicTitle = process.env.CLINIC_NAME
-const clinicServiceDescription = process.env.CLINIC_SERVICE_DESCRIPTION
 export const metadata = {
-  title: "Our Services | " + clinicTitle,
+  title: "Our Services | " + clinicName,
   description:
-    "Explore our comprehensive range of acupuncture treatments and therapies offered at " + clinicTitle + " in Raipur.",
+    "Explore our comprehensive range of acupuncture treatments and therapies offered at " + clinicName + " in Raipur.",
 }
 
 export default function ServicesPage() {
@@ -42,7 +44,7 @@ export default function ServicesPage() {
             <h2 className="text-3xl font-bold text-gray-900">Comprehensive Acupuncture Therapies</h2>
             <div className="w-20 h-1 mx-auto mt-4 bg-primary"></div>
             <p className="mt-6 text-lg text-gray-700">
-              At {clinicTitle}, {clinicServiceDescription}.
+              At {clinicName}, {clinicServiceDescription}.
             </p>
           </div>
 

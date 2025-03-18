@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { CalendarIcon, Clock, Tag, ArrowRight } from "lucide-react"
+import {CLINIC_NAME as clinicName } from '@/lib/constants'
 
-const clinicTitle = process.env.CLINIC_NAME
 export const metadata = {
-  title: "Blogs | " + clinicTitle,
+  title: "Blogs | " + clinicName,
   description: "Read our latest articles on acupuncture, traditional Chinese medicine, and holistic health practices.",
 }
 

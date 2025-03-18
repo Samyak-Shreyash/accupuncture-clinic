@@ -107,12 +107,12 @@ export default function AppointmentForm() {
   // Calculate the price based on the selected service
   const selectedPrice = formData.service ? treatmentPrices[formData.service as keyof typeof treatmentPrices] : 0
   const serviceName = formData.service
-    ? Object.entries(treatmentPrices)
-        .find(([key]) => key === formData.service)?.[0]
+    ? (Object.entries(treatmentPrices)
+        .find(([key]) => key === formData.service)?.[0] ?? "")
         .charAt(0)
         .toUpperCase() +
-      Object.entries(treatmentPrices)
-        .find(([key]) => key === formData.service)?.[0]
+      (Object.entries(treatmentPrices)
+        .find(([key]) => key === formData.service)?.[0] ?? "")
         .slice(1) +
       " Acupuncture"
     : ""

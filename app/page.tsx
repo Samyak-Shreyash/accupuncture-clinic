@@ -2,14 +2,10 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { PhoneCall, Mail, MapPin, Clock, ArrowRight, CheckCircle } from "lucide-react"
+import { ArrowRight, CheckCircle } from "lucide-react"
 import TestimonialCarousel from "@/components/testimonial-carousel"
-import AppointmentForm from "@/components/appointment-form"
+import { CLINIC_NAME as clinicName } from "@/lib/constants"
 
-const clinicTitle = process.env.CLINIC_NAME
-const clinicEmail = process.env.CLINIC_EMAIL
-const clinicPhone = process.env.CLINIC_PHONE
-const clinicAddress = process.env.CLINIC_ADDRESS
 
 export default function Home() {
   return (
@@ -57,10 +53,10 @@ export default function Home() {
               />
             </div>
             <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold text-gray-900">Welcome to {clinicTitle} Clinic</h2>
+              <h2 className="text-3xl font-bold text-gray-900">Welcome to {clinicName} Clinic</h2>
               <div className="w-20 h-1 mt-4 bg-primary"></div>
               <p className="mt-6 text-lg text-gray-700">
-                At {clinicTitle}, we blend ancient healing traditions with modern therapeutic approaches to
+                At {clinicName}, we blend ancient healing traditions with modern therapeutic approaches to
                 restore balance and promote wellness. Our clinic in Raipur offers personalized acupuncture treatments
                 designed to address your specific health concerns.
               </p>

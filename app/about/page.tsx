@@ -2,13 +2,15 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { CheckCircle } from "lucide-react"
+import { 
+  CLINIC_NAME as clinicName,
+  CLINIC_FOUNDING_YEAR as foundingYear,
+  CLINIC_FOUNDER as clinicFounder,
+  CLINIC_DESCRIPTION as clinicDescription
+} from '@/lib/constants'
 
-const clinicTitle = process.env.CLINIC_NAME
-const foundingYear = process.env.CLINIC_FOUNDING_YEAR
-const clinicFounder = process.env.CLINIC_FOUNDER
-const clinicDescription = process.env.CLINIC_DESCRIPTION
 export const metadata = {
-  title: "About Us | " + clinicTitle,
+  title: "About Us | " + clinicName,
   description:
    {clinicDescription},
 }
@@ -55,7 +57,7 @@ export default function AboutPage() {
             </div>
             <div className="space-y-6">
               <p className="text-lg text-gray-700">
-                {clinicTitle} was founded in {foundingYear} by {clinicFounder}, a certified acupuncturist with over
+                {clinicName} was founded in {foundingYear} by {clinicFounder}, a certified acupuncturist with over
                 20 years of experience in traditional Accupuncture treatment. After practicing in major cities across India, Dr. Sharma returned to his hometown of Raipur with a vision to
                 bring authentic acupuncture therapy to Chhattisgarh.
               </p>
@@ -86,7 +88,7 @@ export default function AboutPage() {
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-lg text-gray-700">
-                At {clinicTitle}, our mission is to improve the health and wellbeing of our community by providing
+                At {clinicName}, our mission is to improve the health and wellbeing of our community by providing
                 exceptional acupuncture care in a compassionate and supportive environment. We are committed to helping
                 our patients achieve optimal health through natural healing methods and personalized treatment plans.
               </p>

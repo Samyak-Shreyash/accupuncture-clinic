@@ -4,13 +4,14 @@ import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import SiteHeader from "@/components/site-header"
 import SiteFooter from "@/components/site-footer"
+import { CLINIC_NAME as clinicName } from "@/lib/constants"
 
 const inter = Inter({ subsets: ["latin"] })
-const clinicTitle = process.env.CLINIC_NAME
+
 export const metadata = {
-  title:  clinicTitle,
+  title:  clinicName,
   description:
-    "Experience the transformative power of traditional acupuncture therapy at "+clinicTitle+" in Raipur, Chhattisgarh. Book your appointment today.",
+    "Experience the transformative power of traditional acupuncture therapy at "+clinicName+" in Raipur, Chhattisgarh. Book your appointment today.",
     generator: 'v0.dev'
 }
 

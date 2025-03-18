@@ -1,13 +1,19 @@
 import Link from "next/link"
 import { Facebook, Instagram, Twitter, Youtube, MapPin, Phone, Mail, Clock } from "lucide-react"
+import { 
+  CLINIC_NAME as clinicName,
+  CLINIC_EMAIL as clinicEmail,
+  CLINIC_PHONE as clinicPhone,
+  CLINIC_ADDRESS_LINE_1 as clinicAddress_line_1, 
+  CLINIC_ADDRESS_CITY as clinicAddress_city,
+  CLINIC_ADDRESS_STATE as clinicAddress_state,
+  CLINIC_ADDRESS_ZIP as clinicAddress_zip,
+  CLINIC_FACEBOOK as clinicFacebook,
+  CLINIC_INSTAGRAM as clinicInstagram,
+  CLINIC_TWITTER as clinicTwitter,
+  CLINIC_YOUTUBE as clinicYoutube
+} from "@/lib/constants"
 
-const clinicTitle = process.env.CLINIC_NAME
-const clinicEmail = process.env.CLINIC_EMAIL
-const clinicPhone = process.env.CLINIC_PHONE
-const clinicAddress_line_1 = process.env.CLINIC_ADDRESS_LINE_1
-const clinicAddress_city = process.env.CLINIC_ADDRESS_CITY
-const clinicAddress_state = process.env.CLINIC_ADDRESS_STATE
-const clinicAddress_zip = process.env.CLINIC_ADDRESS_ZIP
 export default function SiteFooter() {
   return (
     <footer className="bg-gray-900 text-white">
@@ -15,27 +21,27 @@ export default function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-primary">Kapil</span>
-              <span className="ml-1 text-2xl font-light">Acupuncture</span>
+              <span className="text-2xl font-bold text-primary">{clinicName?.split(' ')[0]}</span>
+              <span className="ml-1 text-2xl font-light">{clinicName?.split(' ')[0]}</span>
             </Link>
             <p className="mt-4 text-gray-400">
               Bringing balance and wellness through traditional acupuncture and holistic healing practices in Raipur,
               Chhattisgarh.
             </p>
             <div className="flex mt-6 space-x-4">
-              <Link href="clinicFacebook" className="text-gray-400 hover:text-primary">
+              <Link href={clinicFacebook} className="text-gray-400 hover:text-primary">
                 <Facebook className="w-5 h-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="clinicInstagram" className="text-gray-400 hover:text-primary">
+              <Link href={clinicInstagram} className="text-gray-400 hover:text-primary">
                 <Instagram className="w-5 h-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="clinicTwitter" className="text-gray-400 hover:text-primary">
+              <Link href={clinicTwitter} className="text-gray-400 hover:text-primary">
                 <Twitter className="w-5 h-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="clinicYoutube" className="text-gray-400 hover:text-primary">
+              <Link href={clinicYoutube} className="text-gray-400 hover:text-primary">
                 <Youtube className="w-5 h-5" />
                 <span className="sr-only">YouTube</span>
               </Link>
@@ -148,7 +154,7 @@ export default function SiteFooter() {
         <div className="pt-8 mt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} {clinicTitle}. All rights reserved.
+              © {new Date().getFullYear()} {clinicName}. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy-policy" className="text-sm text-gray-400 hover:text-primary">

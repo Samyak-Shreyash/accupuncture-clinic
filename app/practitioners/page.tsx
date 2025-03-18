@@ -3,14 +3,15 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Facebook, Instagram, Linkedin } from "lucide-react"
-
-const clinicTitle = process.env.CLINIC_NAME
-const clinicFounder = process.env.CLINIC_FOUNDER
+import { 
+  CLINIC_NAME as clinicName,
+  CLINIC_FOUNDER as clinicFounder
+} from "@/lib/constants"
 
 export const metadata = {
-  title: "Our Practitioners | " + clinicTitle,
+  title: "Our Practitioners | " + clinicName,
   description:
-    "Meet our team of experienced acupuncture practitioners at "+clinicTitle+" in Raipur, Chhattisgarh.",
+    "Meet our team of experienced acupuncture practitioners at "+clinicName+" in Raipur, Chhattisgarh.",
 }
 
 export default function PractitionersPage() {
@@ -52,7 +53,7 @@ export default function PractitionersPage() {
                 name: clinicFounder+"",
                 role: "Founder & Chief Acupuncturist",
                 image: "/placeholder.svg?height=400&width=300",
-                bio: "Dr. Anand Sharma has over 20 years of experience in traditional Chinese medicine and acupuncture. After completing his education in Beijing, he practiced in major cities across India before founding "+clinicTitle+" in Raipur.",
+                bio: "Dr. Anand Sharma has over 20 years of experience in traditional Chinese medicine and acupuncture. After completing his education in Beijing, he practiced in major cities across India before founding "+clinicName+" in Raipur.",
                 specialties: ["Traditional Acupuncture", "Pain Management", "Neurological Conditions"],
                 education: [
                   "Doctor of Traditional Chinese Medicine, Beijing University",

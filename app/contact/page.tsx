@@ -3,21 +3,22 @@ import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { PhoneCall, Mail, MapPin, Clock, Facebook, Instagram, Twitter, Youtube } from "lucide-react"
 import AppointmentForm from "@/components/appointment-form"
-
-const clinicTitle = process.env.CLINIC_NAME
-const clinicEmail = process.env.CLINIC_EMAIL
-const clinicPhone = process.env.CLINIC_PHONE
-const clinicAddress = process.env.CLINIC_ADDRESS
-const clinicAddress_line_1 = process.env.CLINIC_ADDRESS_LINE_1
-const clinicAddress_city = process.env.CLINIC_ADDRESS_CITY
-const clinicAddress_state = process.env.CLINIC_ADDRESS_STATE
-const clinicAddress_zip = process.env.CLINIC_ADDRESS_ZIP
+import { 
+  CLINIC_NAME as clinicName, 
+  CLINIC_PHONE as clinicPhone,
+  CLINIC_EMAIL as clinicEmail,
+  CLINIC_ADDRESS as clinicAddress,
+  CLINIC_ADDRESS_LINE_1 as clinicAddress_line_1,
+  CLINIC_ADDRESS_CITY as clinicAddress_city,
+  CLINIC_ADDRESS_STATE as clinicAddress_state,
+  CLINIC_ADDRESS_ZIP as clinicAddress_zip
+} from "@/lib/constants"
 
 export const metadata = {
-  title: "Contact Us | " + clinicTitle,
+  title: "Contact Us | " + clinicName,
   description:
     "Get in touch with " +
-    clinicTitle +
+    clinicName +
     " in Raipur, Chhattisgarh. Book an appointment or ask us any questions about our services.",
 }
 
@@ -119,7 +120,7 @@ export default function ContactPage() {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Detailed Address</h3>
                 <p className="text-gray-700 mb-4">
-                  {clinicTitle}
+                  {clinicName}
                   <br />
                   {clinicAddress_line_1}
                   <br />

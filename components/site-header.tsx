@@ -5,15 +5,11 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, Phone, X } from "lucide-react"
+import { 
+  CLINIC_NAME as clinicName,
+  CLINIC_PHONE as clinicPhone
+} from "@/lib/constants"
 
-const clinicTitle = process.env.CLINIC_NAME
-const clinicEmail = process.env.CLINIC_EMAIL
-const clinicPhone = process.env.CLINIC_PHONE
-const clinicAddress = process.env.CLINIC_ADDRESS
-const clinicAddress_line_1 = process.env.CLINIC_ADDRESS_LINE_1
-const clinicAddress_city = process.env.CLINIC_ADDRESS_CITY
-const clinicAddress_state = process.env.CLINIC_ADDRESS_STATE
-const clinicAddress_zip = process.env.CLINIC_ADDRESS_ZIP
 
 export default function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -32,8 +28,8 @@ export default function SiteHeader() {
       <div className="container flex items-center justify-between h-16 px-4 mx-auto">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-primary">Kapil</span>
-            <span className="ml-1 text-2xl font-light">Acupuncture</span>
+            <span className="text-2xl font-bold text-primary">clinicName?.split(' ')[0]</span>
+            <span className="ml-1 text-2xl font-light">clinicName?.split(' ')[0]</span>
           </Link>
         </div>
 
@@ -52,7 +48,7 @@ export default function SiteHeader() {
         <div className="flex items-center space-x-4">
           <div className="hidden md:flex md:items-center">
             <Phone className="w-4 h-4 mr-2 text-primary" />
-            <span className="text-sm font-medium">+91-9009953331</span>
+            <span className="text-sm font-medium">{clinicPhone}</span>
           </div>
 
           <Button asChild className="hidden md:inline-flex">
@@ -70,8 +66,8 @@ export default function SiteHeader() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between pb-4 border-b">
                   <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
-                    <span className="text-xl font-bold text-primary">Kapil</span>
-                    <span className="ml-1 text-xl font-light">Acupuncture</span>
+                    <span className="text-xl font-bold text-primary">clinicName?.split(' ')[0]</span>
+                    <span className="ml-1 text-xl font-light">clinicName?.split(' ')[0]</span>
                   </Link>
                 </div>
 
@@ -91,7 +87,7 @@ export default function SiteHeader() {
                 <div className="flex flex-col mt-auto space-y-4 pt-6 border-t">
                   <div className="flex items-center">
                     <Phone className="w-4 h-4 mr-2 text-primary" />
-                    <span className="text-sm font-medium">+91-9009953331</span>
+                    <span className="text-sm font-medium">{clinicPhone}</span>
                   </div>
 
                   <Button asChild className="w-full">

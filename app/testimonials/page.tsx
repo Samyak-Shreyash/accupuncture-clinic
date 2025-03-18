@@ -5,11 +5,10 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Star, Quote, Play, MessageSquare } from "lucide-react"
 import TestimonialCarousel from "@/components/testimonial-carousel"
-
-const clinicTitle = process.env.CLINIC_NAME
+import {CLINIC_NAME as clinicName } from "@/lib/constants"
 
 export const metadata = {
-  title: "Testimonials | " + clinicTitle,
+  title: "Testimonials | " + clinicName,
   description:
     "Read what our patients have to say about their experiences and results with our acupuncture treatments.",
 }

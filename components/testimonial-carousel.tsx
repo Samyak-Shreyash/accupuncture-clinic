@@ -4,16 +4,15 @@ import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
-import Image from "next/image"
+import { CLINIC_NAME as clinicName } from "@/lib/constants"
 
-const clinicTitle = process.env.CLINIC_NAME
 const testimonials = [
   {
     name: "Priya Sharma",
     role: "Chronic Pain Patient",
     image: "/placeholder.svg?height=80&width=80",
     content:
-      "After years of struggling with back pain and trying various treatments, acupuncture at "+clinicTitle+" has been life-changing. The staff is professional, and the results speak for themselves. I'm now able to enjoy activities I had given up on.",
+      "After years of struggling with back pain and trying various treatments, acupuncture at "+clinicName+" has been life-changing. The staff is professional, and the results speak for themselves. I'm now able to enjoy activities I had given up on.",
   },
   {
     name: "Rajesh Kumar",
@@ -27,7 +26,7 @@ const testimonials = [
     role: "Migraine Sufferer",
     image: "/placeholder.svg?height=80&width=80",
     content:
-      "I've been dealing with debilitating migraines for over a decade. After just a few sessions at "+clinicTitle+", the frequency and intensity of my migraines have decreased dramatically. The practitioners truly understand how to target the root causes.",
+      "I've been dealing with debilitating migraines for over a decade. After just a few sessions at "+clinicName+", the frequency and intensity of my migraines have decreased dramatically. The practitioners truly understand how to target the root causes.",
   },
   {
     name: "Vikram Singh",

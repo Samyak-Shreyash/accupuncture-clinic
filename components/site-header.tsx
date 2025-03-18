@@ -66,8 +66,8 @@ export default function SiteHeader() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between pb-4 border-b">
                   <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
-                    <span className="text-xl font-bold text-primary">clinicName?.split(' ')[0]</span>
-                    <span className="ml-1 text-xl font-light">clinicName?.split(' ')[0]</span>
+                    <span className="text-xl font-bold text-primary">{clinicName?.split(' ')[0]}</span>
+                    <span className="ml-1 text-xl font-light">{clinicName?.split(' ')[0]}</span>
                   </Link>
                 </div>
 

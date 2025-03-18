@@ -8,11 +8,13 @@ import {
   CLINIC_PHONE as clinicPhone,
   CLINIC_EMAIL as clinicEmail,
   CLINIC_ADDRESS as clinicAddress,
+  CLINIC_GOOGLE_MAPS as googleMapsUrl,
   CLINIC_ADDRESS_LINE_1 as clinicAddress_line_1,
   CLINIC_ADDRESS_CITY as clinicAddress_city,
   CLINIC_ADDRESS_STATE as clinicAddress_state,
   CLINIC_ADDRESS_ZIP as clinicAddress_zip
 } from "@/lib/constants"
+import LocationMap from "@/components/Location-map"
 
 export const metadata = {
   title: "Contact Us | " + clinicName,
@@ -62,7 +64,6 @@ export default function ContactPage() {
                   <PhoneCall className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
-                <p className="text-gray-700">Call us directly</p>
                 <p className="text-lg font-medium text-primary mt-2">{clinicPhone}</p>
               </CardContent>
             </Card>
@@ -73,7 +74,6 @@ export default function ContactPage() {
                   <Mail className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
-                <p className="text-gray-700">Send us an email</p>
                 <p className="text-lg font-medium text-primary mt-2">{clinicEmail}</p>
               </CardContent>
             </Card>
@@ -84,7 +84,6 @@ export default function ContactPage() {
                   <MapPin className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Location</h3>
-                <p className="text-gray-700">Visit our clinic</p>
                 <p className="text-lg font-medium text-primary mt-2">{clinicAddress}</p>
               </CardContent>
             </Card>
@@ -95,7 +94,6 @@ export default function ContactPage() {
                   <Clock className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Hours</h3>
-                <p className="text-gray-700">Our working hours</p>
                 <p className="text-lg font-medium text-primary mt-2">Mon-Sat: 9:00 AM - 7:00 PM</p>
               </CardContent>
             </Card>
@@ -110,11 +108,10 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Location</h2>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg mb-6">
-                <Image src="/placeholder.svg?height=400&width=600" alt="Map location" fill className="object-cover" />
-                {/* This would be replaced with an actual map component in production */}
-                <div className="absolute inset-0 flex items-center justify-center bg-gray-200/50">
-                  <p className="text-lg font-medium">Interactive Map Would Be Here</p>
-                </div>
+              <LocationMap
+                address={clinicAddress || "Lig 25, Sector 1, Shanker Nagar, Raipur, Chhattisgarh, 492004, India"}
+                googleMapsUrl={googleMapsUrl || "https://maps.app.goo.gl/Zge6GyRTLfPpeqMp9"}
+              />
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md">

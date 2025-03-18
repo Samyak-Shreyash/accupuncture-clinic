@@ -28,8 +28,8 @@ export default function SiteHeader() {
       <div className="container flex items-center justify-between h-16 px-4 mx-auto">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-primary">clinicName?.split(' ')[0]</span>
-            <span className="ml-1 text-2xl font-light">clinicName?.split(' ')[0]</span>
+            <span className="text-2xl font-bold text-primary">{clinicName?.split(' ')[0]}</span>
+            <span className="ml-1 text-2xl font-light">{clinicName?.split(' ')[1]}</span>
           </Link>
         </div>
 
